@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "Unified Account Colors"
+  },
+  "extensionDescription": {
+    "message": "Automatically reuses Thunderbird account and Inbox colors to distinguish messages in unified folders."
+  }
+}

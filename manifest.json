@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "0.1.0",
+  "author": "NalinForge",
+  "default_locale": "en",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{fb6850b6-9aef-40b5-b18a-cfdbfb5ea710}",
+      "strict_min_version": "153.0",
+      "strict_max_version": "157.*"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "experiment_apis": {
+    "UnifiedAccountColors": {
+      "schema": "api/UnifiedAccountColors/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["UnifiedAccountColors"]],
+        "script": "api/UnifiedAccountColors/implementation.js"
+      }
+    }
+  }
+}

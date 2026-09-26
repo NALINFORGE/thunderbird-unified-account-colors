@@ -1,0 +1,15 @@
+[
+  {
+    "namespace": "UnifiedAccountColors",
+    "description": "Synchronise les couleurs des boîtes de réception avec les indicateurs de comptes des dossiers unifiés.",
+    "functions": [
+      {
+        "name": "start",
+        "type": "function",
+        "description": "Démarre la synchronisation automatique des couleurs.",
+        "async": true,
+        "parameters": []
+      }
+    ]
+  }
+]

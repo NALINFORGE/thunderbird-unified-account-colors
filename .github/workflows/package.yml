@@ -1,0 +1,27 @@
+name: Package Thunderbird Add-on
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate JSON
+        run: |
+          python -m json.tool manifest.json >/dev/null
+          python -m json.tool api/UnifiedAccountColors/schema.json >/dev/null
+          python -m json.tool _locales/en/messages.json >/dev/null
+          python -m json.tool _locales/fr/messages.json >/dev/null
+      - name: Package XPI
+        run: python scripts/package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unified-account-colors-xpi
+          path: dist/*.xpi

@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "Couleurs des comptes unifiés"
+  },
+  "extensionDescription": {
+    "message": "Réutilise automatiquement les couleurs configurées dans Thunderbird pour distinguer les comptes dans les listes de messages des dossiers unifiés."
+  }
+}
